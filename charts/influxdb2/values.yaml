@@ -129,6 +129,11 @@ persistence:
   mountPath: /var/lib/influxdb2
   subPath: ""
 
+## Additional containers to be added to the pod.
+extraContainers: {}
+#  - name: my-sidecar
+#    image: nginx:latest
+
 ## Add custom volume and volumeMounts
 ##
 # volumes:

@@ -153,6 +153,8 @@ spec:
           {{- end }}
           resources:
             {{ .Values.resources | toYaml | nindent 12 | trim }}
+        {{- if .Values.extraContainers }}
+{{ toYaml .Values.extraContainers | indent 8}}
 
       {{- if .Values.securityContext.runAsGroup }}
       securityContext:
